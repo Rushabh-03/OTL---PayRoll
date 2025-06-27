@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payroll Software Blog</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.min.css">
+
+    <!-- AOS CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Navbar -->
+    <div id="navbar">
+        <noscript>
+            <style>
+                #navbar {
+                    display: none;
+                }
+            </style>
+            <div class="alert alert-danger text-center">
+                Javascript is required to load the navigation bar.
+            </div>
+        </noscript>
+    </div>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Breadcrumb section -->
+        <section class="breadcrumb-section py-4">
+            <div class="container">
+                <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                        <li class="breadcrumb-item"><a href="blog.html">Blogs</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Guide to Automated Onboarding</li>
+                    </ol>
+                </nav>
+                <div class="blog-heading text-start px-4">
+                    <h2 class="fw-semibold mb-0 py-2 px-3">Guide to Automated Onboarding</h2>
+                    <div class="mt-0">
+                        <ul class="d-flex text-muted">
+                            <li class="fs-6 me-3 fw-light" style="list-style: none;">18 Arpil 2021</li>
+                            <li class="fs-6 mx-3 fw-light">By Admin</li>
+                            <li class="fs-6 mx-3 fw-light">Post Category</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Main Content -->
+        <div class="container blog-detail">
+            <div class="row">
+                <!-- BLog Content -->
+                <div class="col-lg-8 p-5">
+                    <div class="d-flex flex-column align-items-start text-start">
+                        <div class="position-relative w-100">
+                            <img src="assets/Blog Images/blog-1.png" class="w-100" alt="Blog Main">
+                        </div>
+                        <h6 class="blog-title mt-4 d-block p-3 border-2 border-start">HR's Guide to Automated
+                            Onboarding</h6>
+
+                        <p class="mt-4 text-muted">The Allied Workforce Mobility Survey found that only 58% of
+                            companies offer clear job titles and determine expectations for employees. Moreover just
+                            39% establish milestones and set goals for new employees. In the past, on-boarding or
+                            orientation program mainly involved communicating factual information about salary &
+                            benefits, review company principles & procedures and completing paperwork. However
+                            presently it's crucial that the on-boarding process also focuses on the expectations and
+                            important skills that employee is required to posses.</p>
+                        <img class="img-fluid mt-2" src="assets/Blog Images/blog-1-1.png" alt="">
+                        <p class="mt-4 text-muted">When the HR team plans the orientation program, they should set
+                            the targets for these processes. Outline specific skills and key competencies the role
+                            might be, make out examples of how the current hire can accomplish these objectives and
+                            determine the effect. Employee who get clarity regarding their roles will have a higher
+                            on-boarding and company success that those who do not.</p>
+                        <a href="#" class="next-blog1"><span>Want To Immediately Reverse All Your On-boarding
+                                Issues? & How to successfully tackle difficult On-boarding Issues: 7 Challenges
+                                related to On-boarding 2021</span></a>
+                        <div class="d-flex flex-column gap-2 mt-4">
+                            <span>Check out our latest article here:</span>
+                            <a href="#" class="next-blog2"><span>Implementing Predictive Analytics in HRMS -
+                                    PayrollSoftware All-In-One HR Software - #1 HR Software in India For startups to
+                                    Enterprise</span></a>
+                        </div>
+                        <a href="blog-detail1.html" class="btn btn-contact rounded-3 mt-4 p-3">Learn More</a>
+                    </div>
+                    <hr class="mt-5">
+                    <div class="blog-social-icons d-flex justify-content-end mt-5">
+                        <div class="like-count d-flex border rounded-pill px-2" onclick="handleLike(this)">
+                            <i class="bi bi-heart p-2" id="likeIcon"></i>
+                            <span class="likes p-2">120</span>
+                        </div>
+                        <div class="blog-social-icon">
+                            <a href="#" class="mx-2"><img src="assets/Blog Images/Social/facebook.svg"
+                                    alt="Facebook"></a>
+                        </div>
+                        <div class="blog-social-icon">
+                            <a href="#" class="mx-2"><img src="assets/Blog Images/Social/twitter.svg" alt="Twitter"></a>
+                        </div>
+                        <div class="blog-social-icon">
+                            <a href="#" class="mx-2"><img src="assets/Blog Images/Social/linkedin.svg"
+                                    alt="LinkedIn"></a>
+                        </div>
+                        <div class="blog-social-icon">
+                            <a href="#" class="mx-2"><img src="assets/Blog Images/Social/pinterest.svg"
+                                    alt="Pinterest"></a>
+                        </div>
+                    </div>
+                    <hr class="mt-5">
+
+                    <!-- Comment Section -->
+                    <div class="mt-5">
+                        <div>
+                            <div class="row text-start">
+                                <div class="col-lg-2 align-self-start">
+                                    <hr class="mt-2">
+                                </div>
+                                <div class="col-lg-5">
+                                    <h6 class="comment-title mb-4">Write a Comment</h6>
+                                </div>
+                                <div class="form-section">
+                                    <form id="blog-comment" >
+                                        <div class="row mb-4">
+                                            <div class="col-md-6">
+                                                <label for="name" class="form-label fw-medium">Name*</label>
+
+                                                <input type="text" class="form-control" id="name"
+                                                    placeholder="Enter Name" required>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <label for="email" class="form-label fw-medium">Email*</label>
+                                                <input type="email" class="form-control" id="email"
+                                                    placeholder="Enter Email" required>
+                                            </div>
+                                        </div>
+
+                                        <div class="mb-4">
+                                            <label for="website" class="form-label fw-medium">Website*</label>
+                                            <input type="text" class="form-control" id="website"
+                                                placeholder="Enter Website" required>
+                                        </div>
+
+                                        <div class="form-check mb-4">
+                                            <input class="form-check-input" type="checkbox" id="saveInfo">
+                                            <label class="form-check-label" for="saveInfo">
+                                                Save my name, email, and website in this browser for the next time I
+                                                comment.
+                                            </label>
+                                        </div>
+
+                                        <div class="mb-4">
+                                            <label for="comment" class="form-label fw-medium">Comment</label>
+                                            <textarea class="form-control" id="comment"
+                                                placeholder="Enter your comment here..."></textarea>
+                                        </div>
+
+                                        <button type="submit" class="btn btn-contact p-3">Post Comment</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Side Section -->
+                <div class="col-lg-4 text-start blog-sidebar mt-5 p-5">
+                    <div class="row">
+                        <div class="col-lg-3 align-self-start">
+                            <hr class="mt-2">
+                        </div>
+                        <div class="col-lg-9">
+                            <h6 class="side-title mb-4">You May Also Like</h6>
+                        </div>
+                    </div>
+
+                    <div class="mb-4 d-flex flex-column">
+                        <a href="#"><img src="assets/Blog Images/blog-2.png" class="img-fluid me-3 mt-4 rounded"
+                                alt="Blog 1"></a>
+                        <div class="mt-3">
+                            <div class="meta text-muted">01 December 2023 • By Soniya Lalwani</div>
+                            <a href="#" class="side-blog-heading">
+                                <h6 class="card-title mt-2">Revolutionizing Workforce Management in Pharmaceutical &
+                                    Healthcare
+                                    Industry</h6>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="mb-4 d-flex flex-column">
+                        <a href="#"><img src="assets/Blog Images/blog-5.png" class="img-fluid me-3 mt-4 rounded"
+                                alt="Blog 2"></a>
+                        <div class="mt-3">
+                            <div class="meta text-muted">15 December 2023 • By Soniya Lalwani</div>
+                            <a href="#" class="side-blog-heading">
+                                <h6 class="card-title mt-2">The Power of Analytics in Modern Leave Management
+                                    Systems
+                                </h6>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="mb-4 d-flex flex-column">
+                        <a href="#"><img src="assets/Blog Images/blog-9.png" class="img-fluid me-3 mt-4 rounded"
+                                alt="Blog 3"></a>
+                        <div class="mt-3">
+                            <div class="meta text-muted">20 December 2023 • By HR Insights Team</div>
+                            <a href="#" class="side-blog-heading">
+                                <h6 class="card-title mt-2">Why Modern Onboarding Tools Are Essential in 2025</h6>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Footer Container -->
+    <div id="footer">
+        <noscript>
+            <style>
+                #footer {
+                    display: none;
+                }
+            </style>
+            <div class="alert alert-danger text-center">
+                JavaScript is required to load the Footer.
+            </div>
+        </noscript>
+    </div>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" class="btn btn-back-to-top" title="Back to Top">
+        <i class="bi bi-arrow-up"></i>
+    </button>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Custom script -->
+    <script src="js/script.min.js"></script>
+
+    <!-- Navbar Script -->
+    <script src="js/script.min.js" defer></script>
+
+    <!-- Footer Script -->
+    <script src="js/script.min.js" defer></script>
+
+    <!-- AOS JS -->
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+
+    <!-- Like Toggle -->
+    <script>
+        function handleLike(element) {
+            const icon = element.querySelector('.bi-heart, .bi-heart-fill');
+            const likesSpan = element.querySelector('.likes');
+            let likes = parseInt(likesSpan.textContent);
+
+            if (!icon.classList.contains('liked')) {
+                icon.classList.add('liked');
+                icon.classList.remove('bi-heart');
+                icon.classList.add('bi-heart-fill');
+                icon.style.color = '#303F9F';
+                likes++;
+            } else {
+                icon.classList.remove('liked');
+                icon.classList.remove('bi-heart-fill');
+                icon.classList.add('bi-heart');
+                icon.style.color = '';
+                likes--;
+            }
+
+            likesSpan.textContent = likes;
+        }
+    </script>
+
+    <!-- Initialize AOS -->
+    <script>
+        AOS.init({
+            duration: 1000,
+            once: true,
+            disable: window.innerWidth < 768,
+            disableForReducedMotion: true
+        });
+    </script>
+</body>
+
+</html>
