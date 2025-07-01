@@ -23,6 +23,10 @@
 
     <!-- AOS CSS -->
     <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+    <!-- Preload Blog Image -->
+    <link rel="preload" as="image" href="assets/Blog Images/blog-1.png">
+    <link rel="preload" as="image" href="assets/Blog Images/blog-2.png">
 </head>
 
 <body>
@@ -104,7 +108,7 @@
                 <div class="col-md-6 blog-card-wrapper" data-aos="fade-right">
                     <div class="blog-card h-100">
                         <div class="bg-white rounded-5 p-3 border blog-card-img">
-                            <a href="#"><img src="assets/Blog Images/blog-3.png" alt="Blog Image 3" /></a>
+                            <a href="#"><img src="assets/Blog Images/blog-3.png" loading="lazy" alt="Blog Image 3" /></a>
                         </div>
                         <div class="blog-card-text d-flex flex-column align-items-start text-start gap-2 p-3">
                             <span class="text-muted">25 May 2021 • By Admin</span>
@@ -123,7 +127,7 @@
                 <div class="col-md-6 blog-card-wrapper" data-aos="fade-left">
                     <div class="blog-card h-100">
                         <div class="bg-white rounded-5 p-3 border blog-card-img">
-                            <a href="#"><img src="assets/Blog Images/blog-4.png" alt="Blog Image 4" /></a>
+                            <a href="#"><img src="assets/Blog Images/blog-4.png" loading="lazy" alt="Blog Image 4" /></a>
                         </div>
                         <div class="blog-card-text d-flex flex-column align-items-start text-start gap-2 p-3">
                             <span class="text-muted">06 June 2021 • By Soniya Lalwani</span>
@@ -142,7 +146,7 @@
                 <div class="col-md-6 blog-card-wrapper" data-aos="fade-right">
                     <div class="blog-card h-100">
                         <div class="bg-white rounded-5 p-3 border blog-card-img">
-                            <a href="#"><img src="assets/Blog Images/blog-5.png" alt="Blog Image 5" /></a>
+                            <a href="#"><img src="assets/Blog Images/blog-5.png" loading="lazy" alt="Blog Image 5" /></a>
                         </div>
                         <div class="blog-card-text d-flex flex-column align-items-start text-start gap-2 p-3">
                             <span class="text-muted">04 October 2021 • By Soniya Lalwani</span>
@@ -161,7 +165,7 @@
                 <div class="col-md-6 blog-card-wrapper" data-aos="fade-left">
                     <div class="blog-card h-100">
                         <div class="bg-white rounded-5 p-3 border blog-card-img">
-                            <a href="#"><img src="assets/Blog Images/blog-6.png" alt="Blog Image 6" /></a>
+                            <a href="#"><img src="assets/Blog Images/blog-6.png" loading="lazy" alt="Blog Image 6" /></a>
                         </div>
                         <div class="blog-card-text d-flex flex-column align-items-start text-start gap-2 p-3">
                             <span class="text-muted">20 June 2022 • By Soniya Lalwani</span>
@@ -285,22 +289,13 @@
     </button>
 
     <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" defer></script>
 
     <!-- Custom script -->
-    <script src="js/script.min.js"></script>
-
-    <!-- Navbar Script -->
-    <script src="js/script.min.js" defer></script>
-
-    <!-- Footer Script -->
     <script src="js/script.min.js" defer></script>
 
     <!-- AOS JS -->
-    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
-
-    <!-- Pagination Script -->
-    <script src="js/script.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js" defer></script>
 
     <!-- Initialize AOS -->
     <script>
