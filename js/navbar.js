@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const navbarContainer = document.getElementById('navbar');
     if (!navbarContainer) return;
 
-    const NAVBAR_CACHE_KEY = "cachedNavbar_v2"; // Increment this when navbar.html changes
+    const NAVBAR_CACHE_KEY = "cachedNavbar_v3"; // Increment this when navbar.html changes
 
     const cachedNavbar = localStorage.getItem(NAVBAR_CACHE_KEY);
 
