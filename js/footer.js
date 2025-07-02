@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const footerContainer = document.getElementById('footer');
     if (!footerContainer) return;
 
-    const FOOTER_CACHE_KEY = "cachedFooter_v2"; // Increment this when footer.html changes
+    const FOOTER_CACHE_KEY = "cachedFooter_v5"; // Increment this when footer.html changes
 
     const cachedFooter = localStorage.getItem(FOOTER_CACHE_KEY);
 

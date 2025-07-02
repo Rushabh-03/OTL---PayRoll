@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Orange Market Place</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.min.css">
+    
+    <!-- AOS CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Navbar -->
+    <div id="navbar">
+        <noscript>
+            <style>
+                #navbar {
+                    display: none;
+                }
+            </style>
+            <div class="alert alert-danger text-center">
+                Javascript is required to load the navigation bar.
+            </div>
+        </noscript>
+    </div>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Breadcrumb section -->
+        <section class="breadcrumb-section py-4">
+            <div class="container">
+                <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Orange Market Place</li>
+                    </ol>
+                </nav>
+                <div class="blog-heading text-start">
+                    <h1 class="py-2">Orange Market Place</h1>
+                </div>
+            </div>
+        </section>
+
+        <!-- Search Section -->
+        <section class="search-section p-3">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-3 col-sm-12 mt-3">
+                        <div class="d-flex">
+                            <input type="text" class="form-control search-input-marketplace me-3"
+                                placeholder="Search...">
+                            <button class="btn btn-go rounded text-white px-4">Go</button>
+                        </div>
+                    </div>
+                    <div class="col-lg-9 col-sm-12 mt-3">
+                        <div class="d-flex align-items-center justify-content-end">
+                            <label class="me-2 text-muted">Sort By:</label>
+                            <select class="sort-select p-2 rounded">
+                                <option>Most Popular</option>
+                                <option>Newest</option>
+                                <option>Rating</option>
+                                <option>Price</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Main Content -->
+        <section class="marketplace-content p-5">
+            <div class="container">
+                <div class="row">
+                    <!-- Market Place Sidebar -->
+                    <div class="col-lg-3 pe-4">
+                        <div class="marketplace-sidebar">
+                            <h4 class="text-start d-flex justify-content-between align-items-center">
+                                Categories
+                                <i class="fas fa-chevron-down me-3"></i>
+                            </h4>
+                            <hr>
+                            <ul class="list-unstyled ps-3 text-start">
+                                <li class="mt-3">Human Resources</li>
+                                <li class="mt-3">Business Intelligence</li>
+                                <li class="mt-3">Employee Engagement</li>
+                                <li class="mt-3">Sales & Marketing</li>
+                                <li class="mt-3">Accounting</li>
+                                <li class="mt-3">Customer Support</li>
+                                <li class="mt-3">Project Management</li>
+                                <li class="mt-3">e-Learning</li>
+                                <li class="mt-3">Utilities</li>
+                                <li class="mt-3">Security</li>
+                                <li class="mt-3">Recruitment and Hiring</li>
+                                <li class="mt-3">Payroll</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Tools Grid -->
+                    <div class="tool-section col-lg-9">
+                        <div class="row" id="toolsGrid">
+                            <!-- Tools will be populated by JavaScript -->
+                        </div>
+
+                        <div class="row col-12 text-center ps-4">
+                            <button class="btn p-3 load-more-btn">Load More</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="js/tools.js" defer></script>
+    <!-- Footer Container -->
+    <div id="footer">
+        <noscript>
+            <style>
+                #footer {
+                    display: none;
+                }
+            </style>
+            <div class="alert alert-danger text-center">
+                JavaScript is required to load the Footer.
+            </div>
+        </noscript>
+    </div>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" class="btn btn-back-to-top" title="Back to Top">
+        <i class="bi bi-arrow-up"></i>
+    </button>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" defer></script>
+
+    <!-- Custom script -->
+    <script src="js/script.min.js" defer></script>
+
+    <!-- AOS JS -->
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+
+    <!-- Filter Dropdown -->
+    <script>
+        function updateDropdown(element) {
+            document.getElementById('dropdownBtn').innerHTML = element.textContent +
+                '<i class="bi bi-chevron-down ms-2"></i>';
+        }
+    </script>
+
+    <!-- Initialize AOS -->
+    <script>
+        AOS.init({
+            duration: 1000,
+            once: true,
+            disable: window.innerWidth < 768,
+            disableForReducedMotion: true
+        });
+    </script>
+</body>
+
+</html>

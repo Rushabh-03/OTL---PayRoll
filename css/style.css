@@ -281,29 +281,52 @@ hr {
 
 /* Hero tab animations */
 @keyframes employeeTabFloat {
-  0% { transform: translate(0, 0); }
-  50% { transform: translate(10px, 10px); }
-  100% { transform: translate(0, 0); }
+  0% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(10px, 10px);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
 }
 
 @keyframes reportTabFloat {
-  0% { transform: translate(0, 0); }
-  50% { transform: translate(10px, -10px); }
-  100% { transform: translate(0, 0); }
+  0% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(10px, -10px);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
 }
 
 @keyframes salaryTabFloat {
-  0% { transform: translate(0, 0); }
-  50% { transform: translate(10px, 10px); }
-  100% { transform: translate(0, 0); }
+  0% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(10px, 10px);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
 }
 
 @keyframes attendanceTabFloat {
-  0% { transform: translate(0, 0); }
-  50% { transform: translate(10px, -10px); }
-  100% { transform: translate(0, 0); }
+  0% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(10px, -10px);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
 }
-
 
 .employee-tab {
   animation: employeeTabFloat 3s ease-in-out infinite;
@@ -1044,6 +1067,108 @@ textarea {
   display: block;
 }
 
+/* Orange Market Place */
+
+/* Search Section */
+.search-section {
+  border-bottom: 1px solid rgba(28, 31, 55, 0.2);
+}
+
+.btn-go {
+  background: var(--bs-main-gradient);
+}
+
+.search-input-marketplace {
+  border: 1px solid #303f9f !important;
+}
+
+.sort-select {
+  border: 1px solid #303f9f;
+}
+
+/* tools section */
+.tool-section {
+  border-left: 1px solid rgba(28, 31, 55, 0.2);
+}
+
+.tool-card {
+  background: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 1rem 1rem 0.75rem;
+  text-align: left;
+  transition: 0.2s ease-in-out;
+}
+
+.tool-card:hover {
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+  transform: translateY(-2px);
+}
+
+.tool-icon {
+  height: 140px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6px;
+  margin-bottom: 1rem;
+}
+
+.tool-icon img {
+  max-height: 50px;
+}
+
+.tool-title {
+  font-weight: 400;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  color: #1c1f37;
+  min-height: 48px;
+  margin-bottom: 4px;
+}
+
+.tool-team {
+  color: #1c1f37cc;
+  font-size: 0.75rem;
+  line-height: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.star-rating {
+  display: flex;
+  align-items: center;
+  font-size: 0.85rem;
+}
+
+.star-rating i {
+  color: #ff7502;
+  margin-right: 2px;
+}
+
+.tool-label {
+  margin-left: auto;
+  color: #303f9f;
+  font-weight: 400;
+  font-size: 0.75rem;
+  line-height: 1.5rem;
+}
+.load-more-btn {
+  background: #fff;
+  border: 3px solid #303f9f;
+  color: #303f9f;
+  transition: all 0.3s ease;
+  font-weight: 700;
+  font-size: 1rem;
+  line-height: 100%;
+}
+
+.load-more-btn:hover {
+  border-color: #7b1fa2;
+  color: #7b1fa2;
+  filter: brightness(1.1);
+  transform: scale(1.02);
+}
+
 /* Responsive adjustments for screens below 991px */
 @media (max-width: 991px) {
   /* Mobile adjustments for footer */
@@ -1693,7 +1818,6 @@ textarea {
     height: 30vh;
   }
 
-
   @media (max-height: 650px) {
     .why-us-phone {
       height: 25vh;
@@ -1866,7 +1990,7 @@ textarea {
   .clients-words-text-section {
     height: 160vh;
   }
-  
+
   @media (max-height: 950px) {
     .why-us-text-section {
       height: 95vh;
@@ -1929,7 +2053,7 @@ textarea {
     .clients-words-text-section {
       height: 170vh;
     }
-    
+
     .clients-words-tabs {
       height: 35vh !important;
     }
@@ -1976,6 +2100,16 @@ textarea {
   /* Mobile hide */
   .mobile-hide {
     display: none !important;
+  }
+
+
+  /* Orange Market Place */
+  .tool-section {
+    border: none;
+  }
+
+  .tool-card {
+    padding: 0 !important;
   }
 }
 
