@@ -1084,6 +1084,7 @@ textarea {
 
 .sort-select {
   border: 1px solid #303f9f;
+  appearance: none;
 }
 
 /* tools section */
@@ -1114,8 +1115,36 @@ textarea {
   margin-bottom: 1rem;
 }
 
+.tool-icon:hover {
+  border: 2px solid; /* Set border width and style */
+  border-color: var(
+    --solid-color
+  ); /* Use the solid color from data attribute */
+}
+
 .tool-icon img {
   max-height: 50px;
+}
+
+/* New styles for sidebar categories */
+.category-list {
+  padding-left: 1rem; /* Maintain existing padding */
+}
+
+.category-item {
+  cursor: pointer; /* Indicate clickability */
+  padding: 0.5rem 1rem; /* Add padding for better click area */
+  border-radius: 4px; /* Subtle rounding for hover effect */
+  transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transitions */
+}
+
+.category-item:hover {
+  background-color: #f5f5f5; /* Light gray hover effect */
+}
+
+.category-item.active {
+  color: #303f9f; /* Active state color */
+  background-color: transparent; /* Ensure active state doesn't use hover background */
 }
 
 .tool-title {
@@ -1125,6 +1154,10 @@ textarea {
   color: #1c1f37;
   min-height: 48px;
   margin-bottom: 4px;
+}
+
+.tool-title:hover {
+  color: #303f9f;
 }
 
 .tool-team {
@@ -1163,8 +1196,9 @@ textarea {
 }
 
 .load-more-btn:hover {
-  border-color: #7b1fa2;
-  color: #7b1fa2;
+  border: none;
+  background: var(--bs-main-gradient);
+  color: #fff;
   filter: brightness(1.1);
   transform: scale(1.02);
 }
@@ -2101,7 +2135,6 @@ textarea {
   .mobile-hide {
     display: none !important;
   }
-
 
   /* Orange Market Place */
   .tool-section {

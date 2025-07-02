@@ -61,17 +61,17 @@
         <section class="search-section p-3">
             <div class="container">
                 <div class="row align-items-center">
-                    <div class="col-lg-3 col-sm-12 mt-3">
+                    <div class="col-lg-3 col-sm-12 my-2">
                         <div class="d-flex">
                             <input type="text" class="form-control search-input-marketplace me-3"
                                 placeholder="Search...">
                             <button class="btn btn-go rounded text-white px-4">Go</button>
                         </div>
                     </div>
-                    <div class="col-lg-9 col-sm-12 mt-3">
+                    <div class="col-lg-9 col-sm-12 my-2">
                         <div class="d-flex align-items-center justify-content-end">
                             <label class="me-2 text-muted">Sort By:</label>
-                            <select class="sort-select p-2 rounded">
+                            <select class="sort-select p-2 px-3 rounded">
                                 <option>Most Popular</option>
                                 <option>Newest</option>
                                 <option>Rating</option>
@@ -83,7 +83,6 @@
             </div>
         </section>
 
-
         <!-- Main Content -->
         <section class="marketplace-content p-5">
             <div class="container">
@@ -93,22 +92,22 @@
                         <div class="marketplace-sidebar">
                             <h4 class="text-start d-flex justify-content-between align-items-center">
                                 Categories
-                                <i class="fas fa-chevron-down me-3"></i>
+                                <i class="bi bi-chevron-down me-3"></i>
                             </h4>
                             <hr>
-                            <ul class="list-unstyled ps-3 text-start">
-                                <li class="mt-3">Human Resources</li>
-                                <li class="mt-3">Business Intelligence</li>
-                                <li class="mt-3">Employee Engagement</li>
-                                <li class="mt-3">Sales & Marketing</li>
-                                <li class="mt-3">Accounting</li>
-                                <li class="mt-3">Customer Support</li>
-                                <li class="mt-3">Project Management</li>
-                                <li class="mt-3">e-Learning</li>
-                                <li class="mt-3">Utilities</li>
-                                <li class="mt-3">Security</li>
-                                <li class="mt-3">Recruitment and Hiring</li>
-                                <li class="mt-3">Payroll</li>
+                            <ul class="list-unstyled ps-3 text-start category-list">
+                                <li class="mt-3 category-item">Human Resources</li>
+                                <li class="mt-3 category-item">Business Intelligence</li>
+                                <li class="mt-3 category-item">Employee Engagement</li>
+                                <li class="mt-3 category-item">Sales & Marketing</li>
+                                <li class="mt-3 category-item">Accounting</li>
+                                <li class="mt-3 category-item">Customer Support</li>
+                                <li class="mt-3 category-item">Project Management</li>
+                                <li class="mt-3 category-item">e-Learning</li>
+                                <li class="mt-3 category-item">Utilities</li>
+                                <li class="mt-3 category-item">Security</li>
+                                <li class="mt-3 category-item">Recruitment and Hiring</li>
+                                <li class="mt-3 category-item">Payroll</li>
                             </ul>
                         </div>
                     </div>
@@ -171,6 +170,21 @@
             once: true,
             disable: window.innerWidth < 768,
             disableForReducedMotion: true
+        });
+    </script>
+
+    <!-- Sidebar Category Click Handler -->
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const categoryItems = document.querySelectorAll(".category-item");
+            categoryItems.forEach(item => {
+                item.addEventListener("click", () => {
+                    // Remove active class from all items
+                    categoryItems.forEach(i => i.classList.remove("active"));
+                    // Add active class to clicked item
+                    item.classList.add("active");
+                });
+            });
         });
     </script>
 </body>
