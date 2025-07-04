@@ -20,6 +20,11 @@ body {
     #303f9f,
     #7b1fa2
   ); /* Contact Button Gradient */
+  --bs-main-gradient-reverse: linear-gradient(
+    to top left,
+    #7b1fa2,
+    #303f9f
+  ); /* Contact Button hover Gradient */
   --bs-clients-btn-color: #ff3662; /* Clients Button Color */
   --bs-clients-stat-card-gradient: linear-gradient(
     to bottom,
@@ -141,7 +146,7 @@ body {
 
 .btn-contact:hover {
   color: #fff;
-  background: linear-gradient(to top left, #303f9f, #7b1fa2);
+  background: var(--bs-main-gradient-reverse);
   scale: 1.05;
   filter: brightness(1.1);
 }
@@ -1076,15 +1081,22 @@ textarea {
 
 .btn-go {
   background: var(--bs-main-gradient);
+  transition: all 0.3s ease;
+}
+
+.btn-go:hover {
+  color: #fff;
+  background: var(--bs-main-gradient-reverse);
+  scale: 1.05;
+  filter: brightness(1.1);
 }
 
 .search-input-marketplace {
   border: 1px solid #303f9f !important;
 }
 
-.sort-select {
-  border: 1px solid #303f9f;
-  appearance: none;
+#sortDropdown {
+  border: 2px solid var(--bs-features-btn-color);
 }
 
 /* tools section */
@@ -1116,10 +1128,18 @@ textarea {
 }
 
 .tool-icon:hover {
-  border: 2px solid; /* Set border width and style */
-  border-color: var(
-    --solid-color
-  ); /* Use the solid color from data attribute */
+  border: 2px solid var(--solid-color); /* Set border width and style and use solid color from data attribute */
+  filter: brightness(0.8);
+}
+
+/* Style for links in tool-icon */
+.tool-icon a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  text-decoration: none; /* Remove underline */
 }
 
 .tool-icon img {
@@ -1127,6 +1147,13 @@ textarea {
 }
 
 /* New styles for sidebar categories */
+.accordion-button:not(.collapsed) {
+  color: #1c1f37;
+  background-color: transparent;
+  box-shadow: none;
+  border-bottom: 1px solid rgba(28, 31, 55, 0.2);
+}
+
 .category-list {
   padding-left: 1rem; /* Maintain existing padding */
 }
@@ -1156,8 +1183,98 @@ textarea {
   margin-bottom: 4px;
 }
 
-.tool-title:hover {
-  color: #303f9f;
+.tool-title a {
+  text-decoration: none; /* Remove underline */
+  color: inherit; /* Inherit color from parent */
+}
+
+.tool-title a:hover {
+  color: #007bff;
+}
+
+/* Styles for tool-details.html */
+
+.tool-header {
+  display: flex;
+  align-items: start;
+  gap: 1rem;
+}
+
+.tool-icon-details {
+  width: 160px;
+  height: 160px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid transparent;
+  transition: all 0.3s ease;
+}
+
+.tool-icon-details:hover {
+  border: 2px solid var(--solid-color); /* Set border width and style and use solid color from data attribute */
+  filter: brightness(0.8);
+}
+
+.tool-icon-details img {
+  max-width: 60%;
+  max-height: 60%;
+}
+
+.tool-description {
+  font-size: 1rem;
+  font-weight: 300;
+  margin: 1rem 0;
+}
+
+.btn-install {
+  background: var(--bs-main-gradient);
+  color: white;
+  padding: 0.5rem 1.5rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-install:hover {
+  color: #fff;
+  background: var(--bs-main-gradient-reverse);
+  filter: brightness(1.1);
+  scale: 1.05;
+}
+
+.developer-details {
+  border-color: rgba(28, 31, 55, 0.2) !important;
+  margin-left: 2rem;
+  flex: 1;
+}
+
+.dashboard-screenshots {
+  margin-top: 2rem;
+}
+
+.dashboard-screenshots img {
+  width: 50%;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+/* .additional-info {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid #ddd;
+  padding-top: 1rem;
+} */
+
+.show-more {
+  color: var(--bs-features-btn-color);
+  cursor: pointer;
+}
+
+.show-more:hover {
+  text-decoration: underline;
 }
 
 .tool-team {
@@ -1174,7 +1291,7 @@ textarea {
 }
 
 .star-rating i {
-  color: #ff7502;
+  color: #ff7502 !important;
   margin-right: 2px;
 }
 
@@ -1186,21 +1303,38 @@ textarea {
   line-height: 1.5rem;
 }
 .load-more-btn {
+  position: relative;
+  overflow: hidden;
   background: #fff;
   border: 3px solid #303f9f;
   color: #303f9f;
-  transition: all 0.3s ease;
   font-weight: 700;
   font-size: 1rem;
   line-height: 100%;
+  cursor: pointer;
+  transition: color 0.3s ease;
+  z-index: 0;
+}
+
+.load-more-btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--bs-main-gradient);
+  z-index: -1;
+  transform: translateX(-100%);
+  transition: all 0.3s ease-in-out;
+}
+
+.load-more-btn:hover::before {
+  transform: translateX(0);
 }
 
 .load-more-btn:hover {
-  border: none;
-  background: var(--bs-main-gradient);
   color: #fff;
-  filter: brightness(1.1);
-  transform: scale(1.02);
 }
 
 /* Responsive adjustments for screens below 991px */
@@ -2137,12 +2271,69 @@ textarea {
   }
 
   /* Orange Market Place */
+  .marketplace-content {
+    padding: 1rem !important;
+  }
+  
+  /* Search Section */
+  .category-sort-by {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+  }
+
+  /* Tool Cards Section */
+  .tool-details-container {
+    padding: 0 1rem;
+  }
+  
   .tool-section {
     border: none;
   }
 
   .tool-card {
     padding: 0 !important;
+  }
+  
+
+  .tool-header .col-12 {
+    margin-bottom: 1rem;
+  }
+
+  .tool-icon-details img {
+    width: 80px;
+    height: auto;
+  }
+
+  .btn-install {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    font-size: 1rem;
+  }
+
+  .developer-details {
+    border-left: none !important;
+    padding-left: 0 !important;
+    margin-left: 1rem !important;
+    gap: 1rem !important;
+  }
+
+  .dashboard-screenshots {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .dashboard-screenshots img {
+    width: 100% !important;
+    height: auto;
+  }
+
+  .additional-info .row > p {
+    font-size: 0.9rem;
+  }
+
+  .additional-info .row > p:nth-child(even) {
+    margin-top: 1rem;
   }
 }
 

@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tool Details</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- AOS CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Navbar -->
+    <div id="navbar">
+        <noscript>
+            <style>
+                #navbar {
+                    display: none;
+                }
+            </style>
+            <div class="alert alert-danger text-center">
+                Javascript is required to load the navigation bar.
+            </div>
+        </noscript>
+    </div>
+
+    <!-- Main Content -->
+    <main>
+        <div class="tool-details-container container d-flex flex-column align-items-start mt-4 gap-4">
+            <a href="orange-market-place.html" class="btn btn-sm btn-outline-secondary mb-3"><i
+                    class="bi bi-chevron-double-left"></i> Back</a>
+            <div class="row tool-header">
+                <div class="col-12 col-md-2 mb-3 mb-md-0 d-flex flex-column align-items-center">
+                    <div class="tool-icon-details w-100">
+                        <img src="" alt="Tool Icon" id="tool-icon">
+                    </div>
+                    <button class="btn btn-install rounded-4 p-3 px-5 mt-4">Install</button>
+                </div>
+                <div class="col-12 col-md-6 mb-3 mb-md-0 tool-details text-start">
+                    <div class="d-flex flex-column align-items-start gap-2">
+                        <h3 id="tool-title"></h3>
+                        <div class="star-rating" id="tool-rating"></div>
+                    </div>
+                    <div class="tool-description text-muted" id="tool-description"></div>
+                    <p class="my-1 fw-semibold">Dashboard</p>
+                    <p class="my-1">It shows you system logs at a glance. You can check</p>
+                    <p class="show-more">Show More</p>
+                </div>
+                <div class="col-12 col-md-4 developer-details text-start border-start ps-4">
+                    <p class="text-small">Show More</p>
+                    <p><strong>Customer Support</strong></p>
+                    <p class="text-small">Developer Details</p>
+                    <div class="d-flex flex-column ">
+                        <div class="d-flex align-items-start">
+                            <img src="assets/marketplace/details/OT-logo.svg" alt="Company Icon" id="OT-logo">
+                            <p class="ms-3 fw-semibold">Orange Team</p>
+                        </div>
+                        <p class="text-muted" id="tool-team"></p>
+                    </div>
+                    <p class="show-more">Show More</p>
+                </div>
+            </div>
+            <div class="dashboard-screenshots d-flex" id="dashboard-screenshots"></div>
+            <div class="additional-info row w-100 text-start ms-0 py-3">
+                <h5 class="col-12 py-2 border-bottom border-2 border-dark pb-4 ps-0">
+                    Additional Information
+                </h5>
+
+                <div class="col-12 row border-bottom border-2 py-2">
+                    <p class="col-6 col-md-3 mb-1">Current Version</p>
+                    <p class="col-6 col-md-3 mb-1">What's New</p>
+                    <p class="col-6 col-md-3 mb-1">Last Updated On</p>
+                    <p class="col-6 col-md-3 mb-1">Compatibility</p>
+                </div>
+
+                <div class="col-12 row py-2">
+                    <p class="col-6 col-md-3 mb-0 text-muted" id="tool-version">2.0.10</p>
+                    <p class="col-6 col-md-3 mb-0 text-muted">-</p>
+                    <p class="col-6 col-md-3 mb-0 text-muted" id="tool-last-updated">Aug 22, 2023</p>
+                    <p class="col-6 col-md-3 mb-0 text-muted" id="tool-compatibility">2.1 and up</p>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Footer Container -->
+    <div id="footer">
+        <noscript>
+            <style>
+                #footer {
+                    display: none;
+                }
+            </style>
+            <div class="alert alert-danger text-center">
+                JavaScript is required to load the Footer.
+            </div>
+        </noscript>
+    </div>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" class="btn btn-back-to-top" title="Back to Top">
+        <i class="bi bi-arrow-up"></i>
+    </button>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" defer></script>
+
+    <!-- Custom script -->
+    <script src="js/script.min.js" defer></script>
+
+    <!-- AOS JS -->
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+
+    <!-- Initialize AOS -->
+    <script>
+        AOS.init({
+            duration: 1000,
+            once: true,
+            disable: window.innerWidth < 768,
+            disableForReducedMotion: true
+        });
+    </script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            // Get tool slug from URL
+            const params = new URLSearchParams(window.location.search);
+            const toolSlug = params.get('tool');
+            const tool = toolsData.find(t => createSlug(t.title) === toolSlug);
+
+            // Helper function to create a URL-friendly slug
+            function createSlug(title) {
+                return title
+                    .toLowerCase()
+                    .replace(/[^a-z0-9]+/g, '-')
+                    .replace(/^-+|-+$/g, '');
+            }
+
+            // Helper function to generate star rating HTML
+            function generateStars(rating) {
+                const fullStars = Math.floor(rating);
+                const hasHalfStar = rating % 1 >= 0.5;
+                const emptyStars = 5 - fullStars - (hasHalfStar ? 1 : 0);
+
+                let starsHTML = '';
+
+                // Add full stars
+                for (let i = 0; i < fullStars; i++) {
+                    starsHTML += '<i class="bi bi-star-fill fs-6 text-warning"></i>';
+                }
+
+                // Add half star if needed
+                if (hasHalfStar) {
+                    starsHTML += '<i class="bi bi-star-half fs-6 text-warning"></i>';
+                }
+
+                // Add empty stars
+                for (let i = 0; i < emptyStars; i++) {
+                    starsHTML += '<i class="bi bi-star fs-6 text-warning"></i>';
+                }
+
+                return starsHTML;
+            }
+
+            // Populate details if tool is found
+            if (tool) {
+                document.getElementById('tool-title').textContent = tool.title;
+                document.getElementById('tool-icon').src = tool.iconPath;
+                document.getElementById('tool-description').textContent = tool.description || 'No description available';
+                document.getElementById('tool-team').textContent = `Orange Team is a part of Convergence Services and is responsible for core development of Orange`;
+                document.getElementById('tool-version').textContent = tool.version || 'N/A';
+                document.getElementById('tool-last-updated').textContent = tool.lastUpdated || 'N/A';
+                document.getElementById('tool-compatibility').textContent = tool.compatibility || 'N/A';
+
+                // Generate and display star rating
+                const rating = tool.rating || 0;
+                document.getElementById('tool-rating').innerHTML = generateStars(rating);
+
+                // Set background color and hover border color dynamically
+                const solidColor = tool.background.slice(0, 7);
+                const toolIconDetails = document.querySelector('.tool-icon-details');
+                toolIconDetails.style.background = tool.background;
+
+                // Add hover effect with dynamic border color
+                toolIconDetails.addEventListener('mouseenter', () => {
+                    toolIconDetails.style.border = `2px solid ${solidColor}`;
+                });
+
+                toolIconDetails.addEventListener('mouseleave', () => {
+                    toolIconDetails.style.border = '2px solid transparent';
+                });
+
+                // Populate dashboard screenshots
+                const screenshotsDiv = document.getElementById('dashboard-screenshots');
+                if (tool.dashboardImages && tool.dashboardImages.length) {
+                    tool.dashboardImages.forEach(imgSrc => {
+                        const img = document.createElement('img');
+                        img.src = imgSrc;
+                        img.alt = `${tool.title} Dashboard`;
+                        img.className = 'img-fluid';
+                        screenshotsDiv.appendChild(img);
+                    });
+                } else {
+                    const img = document.createElement('img');
+                    img.src = 'https://via.placeholder.com/600x300';
+                    img.alt = `${tool.title} Dashboard`;
+                    img.className = 'img-fluid';
+                    screenshotsDiv.appendChild(img);
+                }
+            } else {
+                document.getElementById('tool-title').textContent = "Tool Not Found";
+            }
+        });
+    </script>
+
+</body>
+
+</html>

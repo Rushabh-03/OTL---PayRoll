@@ -2,7 +2,7 @@
   "scripts": {
     "minify-html": "html-minifier --input-dir components --output-dir components --file-ext html --collapse-whitespace --remove-comments --minify-css true --minify-js true",
     "minify-css": "csso css/style.css --output css/style.min.css",
-    "minify-js": "uglifyjs js/script.js js/navbar.js js/footer.js js/pagination.js -o js/script.min.js",
+    "minify-js": "uglifyjs js/script.js js/navbar.js js/footer.js js/pagination.js js/tools.js -o js/script.min.js",
     "build": "npm run minify-html && npm run minify-css && npm run minify-js",
     "start": "live-server --port=8080 --entry-file=index.html"
   },
