@@ -313,6 +313,25 @@ const toolsData = [
   },
 ];
 
+// Filter tools based on search term and category
+function filterTools(searchTerm = "", category = "Human Resources") {
+  searchTerm = searchTerm.toLowerCase().trim();
+  
+  const filteredTools = toolsData.filter(tool => {
+    const matchesSearch = searchTerm === "" || 
+                         tool.title.toLowerCase().includes(searchTerm) || 
+                         tool.description.toLowerCase().includes(searchTerm);
+    
+    // If no category is selected or category is "All", show all tools
+    const matchesCategory = category === "All" || 
+                           tool.category === category;
+    
+    return matchesSearch && (category === "All" || true); // For now, ignore category filtering until we add categories to tools
+  });
+  
+  updateToolsDisplay(filteredTools);
+}
+
 // Sort tools based on selected option
 function sortTools(criteria) {
   let sortedTools = [...toolsData]; // clone
@@ -333,6 +352,16 @@ function sortTools(criteria) {
       sortedTools = [...toolsData]; // Default order
   }
 
+  // Apply current search filter to sorted tools
+  const searchInput = document.querySelector('.search-input-marketplace');
+  if (searchInput && searchInput.value.trim() !== "") {
+    const searchTerm = searchInput.value.toLowerCase().trim();
+    sortedTools = sortedTools.filter(tool => 
+      tool.title.toLowerCase().includes(searchTerm) || 
+      tool.description.toLowerCase().includes(searchTerm)
+    );
+  }
+
   updateToolsDisplay(sortedTools);
 }
 
@@ -340,7 +369,6 @@ function sortTools(criteria) {
 function updateToolsDisplay(tools) {
   const container = document.getElementById("toolsGrid");
   if (!container) {
-    // console.warn("toolsGrid not found, skipping tool display update");
     return; // Exit if container is null
   }
   container.innerHTML = tools.map(renderToolCard).join("");
@@ -357,8 +385,6 @@ function applyHoverEffects() {
         icon.style.setProperty("--solid-color", solidColor);
       }
     });
-  } else {
-    console.warn("No tool-icon elements found, skipping hover effects");
   }
 }
 
@@ -391,4 +417,47 @@ document.addEventListener("DOMContentLoaded", () => {
       accordionButton.classList.add("collapsed");
     }
   }
-}); 
+  
+  // Set Human Resources as active by default
+  const categoryItems = document.querySelectorAll(".category-item");
+  if (categoryItems.length > 0) {
+    // Add active class to the first item (Human Resources)
+    categoryItems[0].classList.add("active");
+    
+    // Add click event listeners to all category items
+    categoryItems.forEach(item => {
+      item.addEventListener("click", () => {
+        // Remove active class from all items
+        categoryItems.forEach(i => i.classList.remove("active"));
+        // Add active class to clicked item
+        item.classList.add("active");
+        
+        // Filter tools based on selected category
+        const category = item.textContent.trim();
+        const searchInput = document.querySelector('.search-input-marketplace');
+        filterTools(searchInput ? searchInput.value : "", category);
+      });
+    });
+  }
+  
+  // Setup search functionality
+  const searchInput = document.querySelector('.search-input-marketplace');
+  const searchButton = document.querySelector('.btn-go');
+  
+  if (searchButton && searchInput) {
+    // Search button click event
+    searchButton.addEventListener('click', () => {
+      const activeCategory = document.querySelector('.category-item.active');
+      const category = activeCategory ? activeCategory.textContent.trim() : "All";
+      filterTools(searchInput.value, category);
+    });
+    
+    // Enter key press in search input
+    searchInput.addEventListener('keyup', (e) => {
+      // Filter as you type (real-time filtering)
+      const activeCategory = document.querySelector('.category-item.active');
+      const category = activeCategory ? activeCategory.textContent.trim() : "All";
+      filterTools(searchInput.value, category);
+    });
+  }
+});

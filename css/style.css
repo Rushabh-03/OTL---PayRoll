@@ -1179,7 +1179,7 @@ textarea {
   font-size: 0.875rem;
   line-height: 1.25rem;
   color: #1c1f37;
-  min-height: 20px;
+  min-height: 48px;
   margin-bottom: 4px;
 }
 
@@ -1326,7 +1326,7 @@ textarea {
   background: var(--bs-main-gradient);
   z-index: -1;
   transform: translateX(-100%);
-  transition: all 0.3s ease-in-out;
+  transition: all 0.6s ease-in-out;
 }
 
 .load-more-btn:hover::before {
@@ -1874,7 +1874,7 @@ textarea {
 
   /* Presentation Section */
 
-  .download-title {
+  .down -title {
     align-items: center !important;
   }
   .presentation h2 {
@@ -2263,6 +2263,7 @@ textarea {
   /* social Icons */
   .social-icons {
     gap: 20px !important;
+    justify-content: start !important;
   }
 
   .social-icon {
@@ -2273,6 +2274,34 @@ textarea {
   .social-icon img {
     width: auto !important;
     height: auto !important;
+  }
+
+  .footer-div {
+    padding: 1.75rem !important;
+    padding-top: 0 !important;
+  }
+
+  .footer .col-lg-3 {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    margin-bottom: 30px;
+  }
+
+  .footer-links {
+    margin: 0 !important;
+  }
+
+  .app-badges {
+    display: block !important;
+  }
+
+  .app-badges img {
+    margin-right: 1rem !important;
+  }
+
+  .certifications {
+    margin: 0 !important;
   }
 
   .footer-heading {
@@ -2293,7 +2322,16 @@ textarea {
   .marketplace-content {
     padding: 1rem !important;
   }
-  
+
+  .load-more-div {
+    padding-left: 0.5rem !important;
+    width: auto;
+  }
+
+  .load-more-btn {
+    margin-bottom: 1.5rem !important;
+  }
+
   /* Search Section */
   .category-sort-by {
     display: flex !important;
@@ -2305,7 +2343,7 @@ textarea {
   .tool-details-container {
     padding: 0 1rem;
   }
-  
+
   .tool-section {
     border: none;
   }
@@ -2313,7 +2351,10 @@ textarea {
   .tool-card {
     padding: 0 !important;
   }
-  
+
+  .tool-title {
+    min-height: 20px;
+  }
 
   .tool-header .col-12 {
     margin-bottom: 1rem;
