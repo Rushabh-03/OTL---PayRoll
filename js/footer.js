@@ -5,11 +5,11 @@ document.addEventListener('DOMContentLoaded', () => {
     const FOOTER_CACHE_KEY = "cachedFooter_v1"; // Increment this when footer.html changes
 
     // Clean up old cached versions (v2, v3, etc.)
-    // Object.keys(localStorage).forEach(key => {
-    //     if (key.startsWith("cachedFooter") && key !== FOOTER_CACHE_KEY) {
-    //         localStorage.removeItem(key);
-    //     }
-    // });
+    Object.keys(localStorage).forEach(key => {
+        if (key.startsWith("cachedFooter") && key !== FOOTER_CACHE_KEY) {
+            localStorage.removeItem(key);
+        }
+    });
 
     const cachedFooter = localStorage.getItem(FOOTER_CACHE_KEY);
 
