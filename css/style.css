@@ -1179,7 +1179,7 @@ textarea {
   font-size: 0.875rem;
   line-height: 1.25rem;
   color: #1c1f37;
-  min-height: 48px;
+  min-height: 20px;
   margin-bottom: 4px;
 }
 
