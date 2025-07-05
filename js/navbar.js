@@ -2,8 +2,15 @@ document.addEventListener('DOMContentLoaded', () => {
     const navbarContainer = document.getElementById('navbar');
     if (!navbarContainer) return;
 
-    const NAVBAR_CACHE_KEY = "cachedNavbar_v4"; // Increment this when navbar.html changes
+    const NAVBAR_CACHE_KEY = "cachedNavbar_v1"; // Increment this when navbar.html changes
 
+    // Clean up old cached versions (v2, v3, etc.)
+    Object.keys(localStorage).forEach(key => {
+        if (key.startsWith("cachedNavbar") && key !== NAVBAR_CACHE_KEY) {
+            localStorage.removeItem(key);
+        }
+    });
+    
     const cachedNavbar = localStorage.getItem(NAVBAR_CACHE_KEY);
 
     if (cachedNavbar) {

@@ -1663,11 +1663,6 @@ textarea {
     width: 100%;
   }
 
-  .footer-bottom {
-    /* text-align: center; */ /* Commented: Redundant due to 991px */
-    padding: 20px 15px;
-  }
-
   .footer-links-bottom {
     display: flex;
     flex-wrap: wrap;
@@ -2265,6 +2260,30 @@ textarea {
     gap: 20px;
   }
 
+  /* social Icons */
+  .social-icons {
+    gap: 20px !important;
+  }
+
+  .social-icon {
+    width: 55px !important;
+    height: 55px !important;
+  }
+
+  .social-icon img {
+    width: auto !important;
+    height: auto !important;
+  }
+
+  .footer-heading {
+    width: 80% !important;
+    text-align: start !important;
+  }
+
+  .footer-links-bottom {
+    display: none !important;
+  }
+
   /* Mobile hide */
   .mobile-hide {
     display: none !important;
@@ -2350,24 +2369,8 @@ textarea {
     font-size: 12px;
   }
 
-  /* Adjust footer bottom links for very small screens */
-  .footer-links-bottom {
-    flex-direction: column;
-    gap: 10px;
-  }
-
   /* Hide the separator in footer bottom links */
   .footer-links-bottom span {
     display: none;
-  }
-
-  /* Adjust app badges size */
-  .app-badges img {
-    height: 35px;
-  }
-
-  /* Adjust certification icons size */
-  .cert-icon {
-    height: 25px;
   }
 }
