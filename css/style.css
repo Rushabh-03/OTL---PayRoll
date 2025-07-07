@@ -375,6 +375,7 @@ hr {
   color: #fff;
   font-weight: 400;
   transition: all 0.3s ease;
+  cursor: default;
 }
 
 .clients-btn:hover {
@@ -698,6 +699,7 @@ hr {
   font-size: 1.4rem;
   font-weight: 600;
   line-height: 100%;
+  color: #303F9F;
 }
 
 .clients-card-para {
@@ -1147,7 +1149,7 @@ textarea {
 }
 
 /* New styles for sidebar categories */
-.accordion-button:not(.collapsed) {
+#categoriesAccordion .accordion-button:not(.collapsed) {
   color: #1c1f37;
   background-color: transparent;
   box-shadow: none;
@@ -1828,6 +1830,10 @@ textarea {
     padding: 0 1rem !important;
   }
 
+  .clients-section h2 {
+    padding: 0 !important;
+  }
+
   .clients-card-text {
     padding: 1rem;
   }
@@ -1854,8 +1860,13 @@ textarea {
   }
 
   /* Client Logo Section */
+  .clients-logo-section {
+    padding: 0 !important;
+  }
+
   .clients-logo-section h2 {
     font-size: 1.2rem;
+    padding: 0 !important;
   }
 
   .clients-logo-section img {
@@ -1863,7 +1874,7 @@ textarea {
   }
 
   .clients-logo {
-    padding: 0 2 rem !important;
+    padding: 0 2rem !important;
   }
 
   .clients-btn {
@@ -1903,6 +1914,10 @@ textarea {
   .feature-title {
     align-items: center !important;
     margin-bottom: 1rem !important;
+  }
+
+  .feature-title .clients-btn {
+    margin-top: 0 !important;
   }
 
   .features h2 {
@@ -2008,6 +2023,10 @@ textarea {
     margin-bottom: 1rem !important;
   }
 
+  .enterprise-features-title .clients-btn {
+    margin-bottom: 0 !important;
+  }
+
   .enterprise-features h2 {
     font-size: 1.2rem;
   }
@@ -2056,6 +2075,10 @@ textarea {
     justify-content: center;
     align-items: center !important;
     margin-bottom: 1rem !important;
+  }
+
+  .blogs-section-title .clients-btn {
+    margin-top: 0 !important;
   }
 
   .blogs-section-title h2 {
@@ -2148,6 +2171,7 @@ textarea {
   .clients-words h2 {
     font-size: 1.2rem;
     padding: 0 !important;
+    margin-bottom: 0 !important;
   }
 
   .clients-words-text-section {
