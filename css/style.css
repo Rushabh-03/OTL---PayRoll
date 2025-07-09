@@ -699,7 +699,7 @@ hr {
   font-size: 1.4rem;
   font-weight: 600;
   line-height: 100%;
-  color: #303F9F;
+  color: #303f9f;
 }
 
 .clients-card-para {
@@ -1337,6 +1337,97 @@ textarea {
 
 .load-more-btn:hover {
   color: #fff;
+}
+
+/* Features Pages */
+
+/* Recruitment Page */
+
+.recruitment-section {
+  background: linear-gradient(to bottom, #ffffff, #303f9f12);
+}
+
+.newsletter-subscription {
+  background: linear-gradient(176.4deg, #303f9f 0%, #7b1fa2 183.03%);
+  color: #fff !important;
+  padding: 1rem;
+}
+
+.newsletter-heading {
+  color: #fff;
+  font-weight: 600 !important;
+  line-height: 100%;
+}
+
+#newsletter-email {
+  background-color: #ffffff1a;
+  border: transparent;
+  color: #fff;
+}
+
+.form-control:focus {
+  box-shadow: 0 0 0 0.25rem rgba(255, 54, 98, 0.5) !important;
+}
+
+#newsletter-email::placeholder {
+  color: #fff;
+  font-size: 1.4rem;
+}
+
+.newsletter-img-container {
+  position: relative;
+  margin-bottom: -4%;
+  left: 43%;
+}
+
+.newsletter-img {
+  position: relative;
+  margin-top: -4%;
+}
+
+.newsletter-btn {
+  background-color: #fff;
+  color: #303f9f;
+}
+
+.newsletter-btn:hover {
+  background-color: transparent;
+  color: #fff;
+  border: 1px solid #fff;
+}
+
+.recruitment-overlap-image {
+  max-height: 450px;
+  position: relative;
+  bottom: 0;
+  right: 8rem;
+  /* Changed from 120px to prevent overflow */
+  z-index: 2;
+  max-width: 100%;
+  transition: all 0.3s ease;
+}
+
+.recruitment-overlap-image:hover {
+  filter: brightness(1.05);
+  scale: 1.01;
+}
+
+.recruitment-content {
+  margin-top: 3rem;
+}
+
+.recruitment-content h1 {
+  color: var(--bs-heading-color);
+  font-size: 2.5rem;
+  font-weight: 700;
+  line-height: 1.4;
+  margin-bottom: 1rem;
+}
+
+.recruitment-content p {
+  max-width: 550px;
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
 }
 
 /* Responsive adjustments for screens below 991px */
@@ -2418,6 +2509,77 @@ textarea {
 
   .additional-info .row > p:nth-child(even) {
     margin-top: 1rem;
+  }
+
+  /* Features Pages */
+
+  /* Recruitment Page */
+
+  .newsletter-form {
+    display: flex;
+    flex-direction: column;
+  }
+
+  #newsletter-email {
+    width: 100%;
+    padding: 1rem !important;
+  }
+
+  #newsletter-email::placeholder {
+    font-size: 1rem;
+  }
+
+  .newsletter-btn {
+    width: 100%;
+    padding: 1rem !important;
+  }
+
+  .newsletter-img-container {
+    left: 35%;
+  }
+
+  .newsletter-img {
+    margin-bottom: -15%;
+  }
+
+  .newsletter-disclaimer {
+    font-size: 0.7rem;
+  }
+
+  .recruitment {
+    padding: 0 !important;
+  }
+
+  .recruitment-overlap-image-container {
+    display: none;
+  }
+
+  .recruitment-title {
+    text-align: center !important;
+    align-items: center !important;
+  }
+
+  .recruitment-title h2 {
+    padding: 0 !important;
+  }
+
+  .feature-breadcrumb {
+    padding: 1rem;
+  }
+
+  .recruitment-content {
+    margin: 0 !important;
+    padding: 1rem !important;
+    padding-top: 0 !important;
+  }
+  .recruitment-text {
+    padding-top: 0 !important;
+  }
+  .recruitment-text h1 {
+    font-size: 1.5rem !important;
+  }
+  .recruitment-text p {
+    font-size: 0.9rem !important;
   }
 }
 
