@@ -1401,7 +1401,7 @@ textarea {
   position: relative;
   bottom: 0;
   right: 8rem;
-  /* Changed from 120px to prevent overflow */
+  margin-top: -15%;
   z-index: 2;
   max-width: 100%;
   transition: all 0.3s ease;
@@ -1428,6 +1428,93 @@ textarea {
   max-width: 550px;
   font-size: 1.1rem;
   margin-bottom: 1.5rem;
+}
+
+/* Onboarding Page */
+.bg-gradient-custom {
+  position: relative;
+  overflow: hidden;
+}
+
+/* Desktop spacing for icons */
+@media (min-width: 768px) {
+  /* Optionally, increase padding around text */
+  .bg-gradient-custom {
+    padding-top: 120px !important;
+    padding-bottom: 40px !important;
+  }
+}
+
+.icon-top-image {
+  width: 80px;
+}
+
+.icon-row-image {
+  width: 100px;
+}
+
+.icon-top {
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.icon-left {
+  position: absolute;
+  bottom: 30%;
+  left: 30px;
+}
+
+.icon-right {
+  position: absolute;
+  bottom: 30%;
+  right: 30px;
+}
+
+.text-break-responsive {
+  display: inline-block;
+  max-width: 100%;
+  text-align: center;
+}
+
+.schedule-card {
+  background-color: #fff;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+  height: 100%;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.schedule-card:hover {
+  transform: translateY(-5px);
+}
+
+.schedule-card img {
+  width: 50px;
+  height: 50px;
+  transition: all 0.3s ease;
+}
+
+.schedule-card img:hover {
+  filter: brightness(1.1);
+  scale: 1.05;
+  transform: translateY(-10px);
+}
+
+.schedule-card-btn {
+  background: var(--bs-main-gradient);
+  color: #fff;
+  transition: all 0.3s ease;
+  width: fit-content;
+  margin: 0 auto;
+}
+
+.schedule-card-btn:hover {
+  border: 1px solid #303f9f;
+  background: #fff;
+  color: #303f9f;
 }
 
 /* Responsive adjustments for screens below 991px */
@@ -1782,6 +1869,53 @@ textarea {
   .copyright {
     width: 100%;
     text-align: center;
+  }
+
+  /* Onboarding Page */
+  .text-break-responsive {
+    white-space: pre-line;
+  }
+
+  .text-break-responsive::before {
+    content: "Faster Hires.\A Better talent.\A Multiplied revenue.";
+    display: block;
+    white-space: pre-line;
+  }
+
+  .text-break-responsive::after,
+  .text-break-responsive {
+    color: transparent;
+  }
+
+  .bg-gradient-custom {
+    padding: 100px 10px !important;
+  }
+
+  .icon-top-image {
+    width: 56px;
+  }
+
+  .icon-row-image {
+    width: 64px;
+  }
+
+  .icon-top {
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .icon-left {
+    position: absolute;
+    bottom: 10%;
+    left: 30px;
+  }
+
+  .icon-right {
+    position: absolute;
+    bottom: 10%;
+    right: 30px;
   }
 }
 
@@ -2550,6 +2684,10 @@ textarea {
     padding: 0 !important;
   }
 
+  .recruitment-overlap-image {
+    margin-top: -15%;
+  }
+
   .recruitment-overlap-image-container {
     display: none;
   }
@@ -2557,6 +2695,7 @@ textarea {
   .recruitment-title {
     text-align: center !important;
     align-items: center !important;
+    margin-bottom: 0.5rem !important;
   }
 
   .recruitment-title h2 {
