@@ -59,7 +59,7 @@ const toolsData = [
     label: "Free",
     highlighted: true,
     description: "Orange Support offers a simplified and streamline customer service that delivers fast, effective and measurable support. It helps to organize the customer query process and saves time.",
-    dashboardImages: ["assets/marketplace/details/helpdesk-dashboard.png", "assets/marketplace/details/helpdesk-dashboard.png"],
+    dashboardImages: ["assets/marketplace/details/helpdesk-dashboard.webp", "assets/marketplace/details/helpdesk-dashboard.webp"],
     version: "2.0.10",
     lastUpdated: "Aug 22, 2023",
     compatibility: "21 and up"
