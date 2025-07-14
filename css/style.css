@@ -59,6 +59,10 @@ body {
   justify-content: center;
 }
 
+.navbar-brand img, .offcanvas-header img {
+  border-radius: 6px;
+}
+
 .navbar-nav {
   text-align: center;
 }
